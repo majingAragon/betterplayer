@@ -411,13 +411,9 @@ class _BetterPlayerCupertinoControlsState
                 padding: EdgeInsets.symmetric(
                   horizontal: buttonPadding,
                 ),
-                child: Icon(
-                  (_latestValue != null && _latestValue!.volume > 0)
-                      ? _controlsConfiguration.muteIcon
-                      : _controlsConfiguration.unMuteIcon,
-                  color: iconColor,
-                  size: iconSize,
-                ),
+                child: (_latestValue != null && _latestValue!.volume > 0)
+                    ? _controlsConfiguration.muteIcon
+                    : _controlsConfiguration.unMuteIcon,
               ),
             ),
           ),
@@ -437,13 +433,9 @@ class _BetterPlayerCupertinoControlsState
         height: barHeight,
         color: Colors.transparent,
         padding: const EdgeInsets.symmetric(horizontal: 6),
-        child: Icon(
-          controller.value.isPlaying
-              ? _controlsConfiguration.pauseIcon
-              : _controlsConfiguration.playIcon,
-          color: iconColor,
-          size: barHeight * 0.6,
-        ),
+        child: controller.value.isPlaying
+            ? _controlsConfiguration.pauseIcon
+            : _controlsConfiguration.playIcon,
       ),
     );
   }

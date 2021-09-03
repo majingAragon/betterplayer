@@ -23,16 +23,16 @@ class BetterPlayerControlsConfiguration {
   final Color iconsColor;
 
   ///Icon of play
-  final IconData playIcon;
+  final Widget playIcon;
 
   ///Icon of pause
-  final IconData pauseIcon;
+  final Widget pauseIcon;
 
   ///Icon of mute
-  final IconData muteIcon;
+  final Widget muteIcon;
 
   ///Icon of unmute
-  final IconData unMuteIcon;
+  final Widget unMuteIcon;
 
   ///Icon of fullscreen mode enable
   final IconData fullscreenEnableIcon;
@@ -178,10 +178,13 @@ class BetterPlayerControlsConfiguration {
     this.controlBarColor = Colors.black87,
     this.textColor = Colors.white,
     this.iconsColor = Colors.white,
-    this.playIcon = Icons.play_arrow_outlined,
-    this.pauseIcon = Icons.pause_outlined,
-    this.muteIcon = Icons.volume_up_outlined,
-    this.unMuteIcon = Icons.volume_off_outlined,
+    this.playIcon = const Icon(
+      Icons.play_arrow_outlined,
+      size: 42,
+    ),
+    this.pauseIcon = const Icon(Icons.pause_outlined, size: 42),
+    this.muteIcon = const Icon(Icons.volume_up_outlined),
+    this.unMuteIcon = const Icon(Icons.volume_off_outlined),
     this.fullscreenEnableIcon = Icons.fullscreen_outlined,
     this.fullscreenDisableIcon = Icons.fullscreen_exit_outlined,
     this.skipBackIcon = Icons.replay_10_outlined,
@@ -245,8 +248,11 @@ class BetterPlayerControlsConfiguration {
     return const BetterPlayerControlsConfiguration(
       fullscreenEnableIcon: CupertinoIcons.arrow_up_left_arrow_down_right,
       fullscreenDisableIcon: CupertinoIcons.arrow_down_right_arrow_up_left,
-      playIcon: CupertinoIcons.play_arrow_solid,
-      pauseIcon: CupertinoIcons.pause_solid,
+      playIcon: Icon(
+        CupertinoIcons.play_arrow_solid,
+        size: 42,
+      ),
+      pauseIcon: Icon(CupertinoIcons.pause_solid, size: 42),
       skipBackIcon: CupertinoIcons.gobackward_15,
       skipForwardIcon: CupertinoIcons.goforward_15,
     );
